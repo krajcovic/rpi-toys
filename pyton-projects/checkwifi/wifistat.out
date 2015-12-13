@@ -1,0 +1,9 @@
+wlan0     IEEE 802.11bgn  ESSID:"krajcovic"  
+          Mode:Managed  Frequency:2.422 GHz  Access Point: D4:CA:6D:C8:D1:95   
+          Bit Rate=72.2 Mb/s   Tx-Power=20 dBm   
+          Retry  long limit:7   RTS thr=2347 B   Fragment thr:off
+          Power Management:off
+          Link Quality=70/70  Signal level=-30 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:15478   Missed beacon:0
+
