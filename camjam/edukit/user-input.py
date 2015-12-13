@@ -3,14 +3,14 @@ import os
 import time
 import RPi.GPIO as GPIO
 
-GPIO.setmode(GPIO.BCM)
-# Set the GPIO pin naming mode
-GPIO.setwarnings(False)
-# Supress warnings
+GPIO.setmode(GPIO.BCM)  # Set the GPIO pin naming mode
+GPIO.setwarnings(False)  # Supress warnings
+
 # Set up variables to store the pin numbers
 LEDRed = 18
 LEDYellow = 23
 LEDGreen = 24
+
 # Set the LED pins to output
 GPIO.setup(LEDRed, GPIO.OUT)
 GPIO.setup(LEDYellow, GPIO.OUT)
@@ -23,17 +23,17 @@ count = 0
 LEDChosen = 0
 os.system('clear')
 
-#Clears the screen
+# Clears the screen
 print("Which LED would you like to blink?")
 print("1: Red")
 print("2: Yellow")
 print("3:Green")
 
-#Prints prompts to the screen and waits for input from the user
+# Prints prompts to the screen and waits for input from the user
 led_choice = input("Choose your option: ")
 count = input("How many times would you like it to blink?: ")
 
-#Set the LEDChosen variable depending on the LED choice
+# Set the LEDChosen variable depending on the LED choice
 if led_choice == 1:
     print("You picked the Red LED")
 LEDChosen = LEDRed
@@ -48,9 +48,9 @@ LEDChosen = LEDGreen
 #  have been set to a value other than 0, so flash the LED
 if LEDChosen != 0:
     while count > 0:
-        GPIO.output(LEDChosen,GPIO.HIGH)
+        GPIO.output(LEDChosen, GPIO.HIGH)
         time.sleep(1)
-        GPIO.output(LEDChosen,GPIO.LOW)
+        GPIO.output(LEDChosen, GPIO.LOW)
         time.sleep(1)
         count = count - 1
 
